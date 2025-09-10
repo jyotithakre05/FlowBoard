@@ -1,0 +1,82 @@
+.taskCard {
+  background: var(--trello-white);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+  cursor: grab;
+  position: relative;
+  margin-bottom: 0.8rem;
+  min-height: 8rem;
+}
+
+.taskCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-0.1rem);
+}
+
+.taskCard:active {
+  cursor: grabbing;
+}
+
+.taskTitle {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--trello-text);
+  line-height: 1.4;
+  word-break: break-word;
+  text-align: left;
+  margin: 0;
+  flex: 1;
+}
+
+.actionButtons {
+  display: flex;
+  gap: 0.4rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  justify-content: flex-end;
+  margin-top: auto;
+}
+
+.taskCard:hover .actionButtons {
+  opacity: 1;
+}
+
+.button {
+  padding: 0.6rem;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-size: 1.2rem;
+  min-width: 2.8rem;
+  height: 2.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button--secondary {
+  background: var(--trello-gray-dark);
+  color: var(--trello-text-light);
+}
+
+.button--secondary:hover {
+  background: var(--trello-blue-light);
+  color: var(--trello-white);
+}
+
+.button--danger {
+  background: var(--trello-gray-dark);
+  color: var(--trello-red);
+}
+
+.button--danger:hover {
+  background: var(--trello-red);
+  color: var(--trello-white);
+}
